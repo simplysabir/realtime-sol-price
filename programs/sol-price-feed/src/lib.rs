@@ -1,9 +1,5 @@
 use anchor_lang::prelude::*;
 use chainlink_solana as chainlink;
-// these are for the sol price from pyth feed
-pub const MAXIMUM_AGE: u64 = 60; // One minute
-pub const FEED_ID: &str = "0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d"; // SOL/USD price feed id from https://pyth.network/developers/price-feed-ids
-
 declare_id!("HWpd1gZ1S4XN1xMEU2yhhEqsptX1QLagJweRqdAkagGE");
 
 #[account]
@@ -71,7 +67,7 @@ pub struct Initialize<'info> {
     #[account(
         init,
         payer = user,
-        space = 100,
+        space = 100000,
     )]
     pub decimal: Account<'info, Decimal>,
 

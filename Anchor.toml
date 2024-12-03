@@ -11,7 +11,7 @@ sol_price_feed = "HWpd1gZ1S4XN1xMEU2yhhEqsptX1QLagJweRqdAkagGE"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Devnet"
+cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
